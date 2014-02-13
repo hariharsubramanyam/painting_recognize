@@ -9,6 +9,11 @@ public class DisplayModel {
 		this.mPictureURL = pictureURL;
 	}
 	
+	public DisplayModel(String[] csvLine){
+		this.mID = csvLine[0];
+		this.mPictureURL = csvLine[1];
+	}
+	
 	public String getID() {
 		return this.mID;
 	}
