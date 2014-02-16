@@ -29,15 +29,13 @@ import android.widget.TextView;
 
 import com.example.museumtour.R;
 import com.example.museumtour.adapters.MuseumDisplayArrayAdapter;
+import com.example.museumtour.helpers.APIKeys;
 import com.example.museumtour.models.DisplayModel;
 import com.example.museumtour.models.MuseumDisplays;
 
 public class MainFragment extends Fragment{
 	private static final String TAG = "MainFragment";
-	
-	private static final String CLIENT_API_KEY = "64b83858ba";
-	private static final Integer CLIENT_API_ID = Integer.valueOf(42650);
-	
+		
 	ListView lstMain;
 	Button btnTakePicture;
 	ImageView imgPicture;
@@ -100,7 +98,7 @@ public class MainFragment extends Fragment{
 					Bitmap image = (Bitmap) bundle.get("data");
 					if(image != null){
 						if(ItraffApi.isOnline(getActivity())){
-							ItraffApi api = new ItraffApi(CLIENT_API_ID, CLIENT_API_KEY, TAG, true);
+							ItraffApi api = new ItraffApi(APIKeys.API_ID, APIKeys.API_KEY, TAG, true);
 							ByteArrayOutputStream stream = new ByteArrayOutputStream();
 							image.compress(Bitmap.CompressFormat.JPEG, 100, stream);
 							byte[] pictureData = stream.toByteArray();
