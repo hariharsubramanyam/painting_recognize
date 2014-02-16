@@ -1,4 +1,4 @@
-package com.example.museumtour.helperui;
+package com.example.museumtour.adapters;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.museumtour.R;
-import com.example.museumtour.model.DisplayModel;
+import com.example.museumtour.models.DisplayModel;
 
 public class MuseumDisplayArrayAdapter extends ArrayAdapter<DisplayModel>{
 	 

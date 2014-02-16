@@ -1,9 +1,11 @@
-package com.example.museumtour;
+package com.example.museumtour.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+
+import com.example.museumtour.R;
 
 public abstract class SingleFragmentActivity extends FragmentActivity {
 	protected abstract Fragment createFragment();

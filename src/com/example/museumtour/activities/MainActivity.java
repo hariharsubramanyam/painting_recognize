@@ -1,4 +1,6 @@
-package com.example.museumtour;
+package com.example.museumtour.activities;
+
+import com.example.museumtour.fragments.MainFragment;
 
 import android.support.v4.app.Fragment;
 

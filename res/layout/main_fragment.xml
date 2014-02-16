@@ -3,7 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <ListView android:layout_width="match_parent"
+
+    <ListView
+        android:id="@+id/lst_main"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lst_main"></ListView>
+        android:layout_weight="1" >
+	</ListView>
+	
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="vertical">
+        <ImageView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_picture"
+            android:contentDescription="@string/display_image"/>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_description"/>
+    </LinearLayout>
+    
+    <Button android:id="@+id/btn_takePicture"
+        android:layout_width="match_parent"
+        android:layout_weight="0"
+        android:layout_height="wrap_content"
+        android:text="@string/take_picture"/>
 </LinearLayout>
